@@ -1,0 +1,10 @@
+FROM alpine:latest
+
+WORKDIR /app
+COPY Transle /app/Transle
+
+ENV MISTRAL_TOKEN="your_mistral_token"
+ENV MISTRAL_AGENT_ID="your_agent_id"
+ENV BOT_TOKEN="your_telegram_bot_token"
+
+ENTRYPOINT ["./Transle"]
